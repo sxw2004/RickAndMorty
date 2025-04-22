@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rick and Morty API</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>The Rick and Morty API</h1>
+        </div>
+    </header>
+    
+    <section class="filter-section">
+        <select id="characterFilter">
+            <option value="all">Mostrar todos los personajes</option>
+        </select>
+    </section>
+    
+    <main>
+        <div id="loadingMessage" class="loading">Cargando personajes...</div>
+        <div id="cardsContainer" class="cards-container"></div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="team-info">
+                <h3>Equipo de Desarrollo</h3>
+                <p>Andrés Osorio Cantillo</p>
+                <p>Elías Romero Nadjar</p>
+                <p>Cristian Villarreal Hernández</p>
+            </div>
+            <div class="project-info">
+                <h3>Información del Proyecto</h3>
+                <p>Repositorio: <a href="https://github.com/equipo/rick-morty-api">https://github.com/equipo/rick-morty-api</a></p>
+                <p>Deployment: <a href="https://rick-morty-api-project.vercel.app">https://rick-morty-api-project.vercel.app</a></p>
+            </div>
+            <div class="social-links">
+                <h3>Síguenos</h3>
+                <div>
+                    <a href="#">Twitter</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1.5rem; font-size: 0.9rem; color: #9e9e9e;">
+            <p>© 2025 Rick and Morty API Project. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
