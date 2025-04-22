@@ -4,19 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const characterFilter = document.getElementById('characterFilter');
     let allCharacters = [];
 
-    // Función para obtener los primeros 16 personajes
+
     async function fetchCharacters() {
         try {
             const response = await fetch('https://rickandmortyapi.com/api/character');
             const data = await response.json();
             
-            // Tomar solo los primeros 16 personajes
+     
             allCharacters = data.results.slice(0, 16);
             
-            // Poblar el filtro desplegable
+       
             populateFilterOptions(allCharacters);
             
-            // Mostrar los personajes
+           
             displayCharacters(allCharacters);
             
             loadingMessage.style.display = 'none';
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Función para poblar el filtro desplegable
+  
     function populateFilterOptions(characters) {
         characters.forEach(character => {
             const option = document.createElement('option');
@@ -35,11 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
             characterFilter.appendChild(option);
         });
 
-        // Añadir evento de cambio al filtro
+       
         characterFilter.addEventListener('change', filterCharacters);
     }
 
-    // Función para mostrar los personajes
     function displayCharacters(characters) {
         cardsContainer.innerHTML = '';
         
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Función para crear una card de personaje
+
     function createCharacterCard(character) {
         const card = document.createElement('div');
         card.className = 'card';
@@ -75,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     }
 
-    // Función para filtrar personajes
     function filterCharacters() {
         const selectedValue = characterFilter.value;
         
@@ -87,6 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Iniciar la carga de personajes
+   
     fetchCharacters();
 });
